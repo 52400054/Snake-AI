@@ -1,3 +1,6 @@
+# ==========================================
+# IMPORTS
+# ==========================================
 import sys, pygame
 from core.config import *
 from core.snake import *
@@ -7,6 +10,9 @@ from ui.menu import *
 from ai.classical.a_star import AStarAI
 from ai.ml.agent import Agent
 
+# ==========================================
+# MAIN GAME LOOP
+# ==========================================
 def main():
     pygame.init()
     screen = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
@@ -36,6 +42,9 @@ def main():
         dt = clock.tick(FPS) / 1000.0
         accumulator += dt
         
+        # ==========================================
+        # 1. EVENT HANDLING
+        # ==========================================
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
@@ -74,6 +83,10 @@ def main():
         # tick_rate_to_use = TIME_PER_TICK if current_mode != "ML" else (TIME_PER_TICK / 100)
         # CHẾ ĐỘ BÌNH THƯỜNG
         tick_rate_to_use = TIME_PER_TICK
+        
+        # ==========================================
+        # 2. LOGIC UPDATE (FIXED TIMESTEP)
+        # ==========================================
         if accumulator > 0.1:
             accumulator = 0.1
         while accumulator >= tick_rate_to_use:
@@ -144,6 +157,9 @@ def main():
             
             accumulator -= tick_rate_to_use
         
+        # ==========================================
+        # 3. GRAPHICS RENDERING (INTERPOLATION)
+        # ==========================================
         if game_state == "MENU":
             menu.draw()
         else:

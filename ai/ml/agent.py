@@ -1,3 +1,6 @@
+# ==========================================
+# IMPORTS
+# ==========================================
 import torch
 import random
 import numpy as np
@@ -6,10 +9,16 @@ from core.config import WINDOW_HEIGHT, WINDOW_WIDTH, GRID_SIZE
 from core.snake import UP, DOWN, LEFT, RIGHT
 from ai.ml.model import LinearQNet, QTrainer
 
+# ==========================================
+# CONSTANTS & HYPERPARAMETERS
+# ==========================================
 MAX_MEMORY = 100_000
 BATCH_SIZE = 1000
 LR = 0.001
 
+# ==========================================
+# CLASSES
+# ==========================================
 class Agent:
     def __init__(self):
         self.n_games = 0

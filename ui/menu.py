@@ -1,6 +1,12 @@
+# ==========================================
+# IMPORTS
+# ==========================================
 import pygame
 from core.config import WINDOW_HEIGHT, WINDOW_WIDTH, BG_COLOR
 
+# ==========================================
+# CLASSES
+# ==========================================
 class Menu:
     def __init__(self, screen):
         self.screen = screen

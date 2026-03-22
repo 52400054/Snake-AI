@@ -1,6 +1,12 @@
+# ==========================================
+# IMPORTS
+# ==========================================
 import pygame
 from core.config import WINDOW_WIDTH, WINDOW_HEIGHT, GRID_SIZE, BG_COLOR, GRID_COLOR
 
+# ==========================================
+# CLASSES
+# ==========================================
 class Renderer:
     def __init__(self, screen):
         self.screen = screen

@@ -1,10 +1,19 @@
+# ==========================================
+# IMPORTS
+# ==========================================
 from core.config import WINDOW_HEIGHT, WINDOW_WIDTH, GRID_SIZE
 
+# ==========================================
+# CONSTANTS (DIRECTIONS)
+# ==========================================
 UP = (0, -1)
 DOWN = (0, 1)
 LEFT = (-1, 0)
 RIGHT = (1, 0)
 
+# ==========================================
+# CLASSES
+# ==========================================
 class Snake:
     def __init__(self):
         start_x = (WINDOW_WIDTH // GRID_SIZE) // 2

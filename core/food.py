@@ -1,6 +1,12 @@
+# ==========================================
+# IMPORTS
+# ==========================================
 import random
 from core.config import WINDOW_WIDTH, WINDOW_HEIGHT, GRID_SIZE
 
+# ==========================================
+# CLASSES
+# ==========================================
 class Food:
     def __init__(self):
         self.position = (0, 0)

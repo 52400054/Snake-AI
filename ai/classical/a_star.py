@@ -1,8 +1,13 @@
-# ai/classical/a_star.py
+# ==========================================
+# IMPORTS
+# ==========================================
 import heapq
 from core.config import WINDOW_HEIGHT, WINDOW_WIDTH, GRID_SIZE
 from core.snake import UP, DOWN, LEFT, RIGHT
 
+# ==========================================
+# CLASSES
+# ==========================================
 class Node:
     def __init__(self, position, parent = None):
         self.position = position
