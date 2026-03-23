@@ -79,9 +79,9 @@ def main():
                             snake.change_direction(LEFT)
                         elif event.key == pygame.K_RIGHT or event.key == pygame.K_d:
                             snake.change_direction(RIGHT)
-        # CHẾ ĐỘ THỬ VÀ SAI
+        # TRAINING MODE 
         # tick_rate_to_use = TIME_PER_TICK if current_mode != "ML" else (TIME_PER_TICK / 100)
-        # CHẾ ĐỘ BÌNH THƯỜNG
+        # NORMAL MODE
         tick_rate_to_use = TIME_PER_TICK
         
         # ==========================================
@@ -97,6 +97,7 @@ def main():
                 
                 state_old = []
                 final_move = []
+                next_dir = None
 
                 if current_mode == "ASTAR":
                     next_dir = astar_ai.get_next_direction(snake, food)

@@ -31,9 +31,9 @@ class Agent:
         import os
         model_path = './ai/ml/best_model.pth'
         if os.path.exists(model_path):
-            print("Đã tải thành công bộ não AI (best_model.pth)!")
+            print("Successfully loaded AI brain (best_model.pth)!")
             self.model.load_state_dict(torch.load(model_path))
-            self.model.eval() # Bật chế độ suy luận ròng (không train)
+            self.model.eval() 
 
         self.trainer = QTrainer(self.model, lr = LR, gamma=self.gamma)
 
@@ -102,8 +102,7 @@ class Agent:
         self.trainer.train_step(state, action, reward, next_state, done)
 
     def get_action(self, state):
-        # self.epsilon = 80 - self.n_games # Chế độ thử và sai
-        self.epsilon = 0 # Chế độ đi khôn
+        self.epsilon = 0 
         final_move = [0,0,0]
 
         if random.randint(0, 200) < self.epsilon:

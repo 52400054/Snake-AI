@@ -45,7 +45,6 @@ class AStarAI:
             if current_pos in closed_set:
                 continue
 
-            # ĐÃ TÌM THẤY MỒI
             if current_pos == target:
                 path = []
                 while current_node is not None:

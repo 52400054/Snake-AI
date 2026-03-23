@@ -18,3 +18,5 @@ TIME_PER_TICK = 1.0 / TICK_RATE
 # ==========================================
 BG_COLOR = (30, 30, 30)
 GRID_COLOR = (30, 30, 30)
+GRASS_COLOR_1 = (170, 215, 81)
+GRASS_COLOR_2 = (162, 209, 73)
